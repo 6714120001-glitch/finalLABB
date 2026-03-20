@@ -1,0 +1,303 @@
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  --primary-blue: #3b82f6; /* ฟ้าหลัก */
+  --light-blue-bg: #f0f9ff; /* ฟ้าอ่อนพื้นหลัง */
+  --text-dark: #1e3a8a; /* น้ำเงินเข้มตัวหนังสือ */
+  --severity-critical: #ef4444; /* แดง */
+  --severity-high: #f97316; /* ส้ม */
+  --severity-medium: #eab308; /* เหลือง */
+  --severity-low: #22c55e; /* เขียว */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light-blue-bg);
+  color: #333;
+}
+
+/* จัดกึ่งกลางหน้าจอสำหรับ Login/Register */
+.storm-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.storm-card {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 40px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+/* ไอคอนพายุล็อคขนาด */
+.storm-icon-box {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-blue);
+  border-radius: 16px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.storm-icon-box svg {
+  width: 30px;
+  height: 30px;
+}
+
+.storm-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.storm-subtitle {
+  color: #93c5fd;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Input */
+.storm-input {
+  width: 100%;
+  background: #f8faff;
+  border: 2px solid transparent;
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.storm-input:focus {
+  border-color: var(--primary-blue);
+  background: white;
+}
+
+/* ปุ่มสวยๆ */
+.storm-btn {
+  width: 100%;
+  background: var(--primary-blue);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.storm-btn:hover {
+  background: #2563eb;
+}
+
+.storm-btn:active {
+  transform: scale(0.96);
+}
+
+.storm-footer-link {
+  margin-top: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #60a5fa;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Dashboard */
+.dash-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dash-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--text-dark);
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.btn-primary-sm {
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.btn-primary-sm:hover { background: #2563eb; }
+
+.btn-outline-sm {
+  background: white;
+  color: #a1a1aa;
+  border: 2px solid #e4e4e7;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-outline-sm:hover {
+  color: #ef4444;
+  border-color: #fee2e2;
+}
+
+.report-item {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  border: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.report-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.report-title-box h3 {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+.report-title-box p {
+  font-size: 10px;
+  color: #93c5fd;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.severity-tag {
+  font-size: 10px;
+  font-weight: 900;
+  padding: 6px 12px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+/* สีดาเมจ/ความรุนแรง */
+.severity-tag.critical { background: #fee2e2; color: var(--severity-critical); }
+.severity-tag.high { background: #ffedd5; color: var(--severity-high); }
+.severity-tag.medium { background: #fef9c3; color: var(--severity-medium); }
+.severity-tag.low { background: #dcfce7; color: var(--severity-low); }
+
+/* Report Detail Workflow Checklist for Admin */
+.workflow-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.checklist-item {
+  background: #f8fafc;
+  padding: 15px 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.checklist-item.active {
+  border-color: #22c55e;
+  background: #f0fdf4;
+}
+
+.checklist-label {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text-dark);
+  text-transform: uppercase;
+}
+
+.checklist-item.active .checklist-label { color: #166534; }
+
+.checklist-input {
+  width: 20px;
+  height: 20px;
+  accent-color: #22c55e;
+  cursor: pointer;
+}
+
+/* Chat buble */
+.chat-bubble {
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 13px;
+  font-weight: bold;
+  max-width: 85%;
+  line-height: 1.4;
+}
+
+.chat-bubble.mine {
+  background: var(--primary-blue);
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+
+.chat-bubble.others {
+  background: #f1f5f9;
+  color: var(--text-dark);
+  border-bottom-left-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .workflow-checklist { grid-template-columns: 1fr; }
+  .report-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .report-status-box { align-self: flex-end; }
+}
