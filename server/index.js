@@ -19,6 +19,16 @@ const io = new Server(server, {
     }
 });
 
+const rateLimit = require('express-rate-limit');
+const generalLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    message: "Too many requests from this IP, please try again later."
+});
+app.use(generalLimiter);
+app.use(cors());
+app.use(express.json());
+
 app.use(cors());
 app.use(express.json());
 
